@@ -95,7 +95,7 @@ def select_2(message):
         bot.register_next_step_handler(msg, select_2)
 
 def select_3(message):
-    b = str(list(search(message.text + "Python в youtube.com", tld="co.in", num=10, stop=1, pause=1)))
+    b = str(list(search(message.text + " Python в youtube.com", tld="co.in", num=10, stop=1, pause=1)))
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton("Перейдите по ссылке", url = b[2:-2]))
     bot.send_message(message.chat.id, 'Вот что было найдено по вашему запросу', reply_markup= markup)
